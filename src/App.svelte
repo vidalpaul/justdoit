@@ -3,21 +3,20 @@
 	function addTodo() {
 		todos = [...todos, ''];
 	}
-
 	function removeSelf(index){
 	todos = [...todos.slice(0, index), ...todos.slice(index+1)];
 	}
 </script>
 
 <main>
-	<h1>Just Do It!</h1>
+	<h1><b>Just Do It! &#9994</b></h1>
 	{#each todos as todo, index}
 	<input bind:value={todos[index]}>
 	<button on:click={()=>
-		removeSelf(index)}>X</button>
+		removeSelf(index)}>&#9989</button>
 	<br>
 	{/each}
-	<button on:click={addTodo}>Add</button>
+	<button on:click={addTodo}>&#10133 Task</button>
 </main>
 
 <style>
@@ -30,8 +29,9 @@
 
 	h1 {
 		color: #ff3e00;
+		font-weight:bold;
 		text-transform: uppercase;
-		font-size: 4em;
+		font-size: 2em;
 		font-weight: 100;
 	}
 
